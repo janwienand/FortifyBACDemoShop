@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Main Page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Welcome, {{ username }}!</h1>
+    <p>You are logged in as {{ username }} ({{ role }}).</p>
+    <nav>
+      <ul>
+        <li><a href="/products">Product List</a></li>
+        <li><a href="/cart">Shopping Cart</a></li>
+        <li><a href="/logout">Logout</a></li>
+        {% if role == "admin" %}
+        <li><a href="/add_user">Add User</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+      
+
+      h1 {
+        font-size: 3rem;
+        margin: 0;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 2rem;
+        border-radius: 0.5rem;
+        margin-top: 2rem;
+      }
+
+      label {
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-weight: bold;
+      }
+
+      input[type="text"], input[type="password"] {
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+        border: none;
+        border-bottom: 1px solid #ddd;
+        width: 100%;
+      }
+
+      input[type="submit"] {
+        margin-top: 2rem;
+        padding: 1rem 2rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 0.5rem;
+        color: #fff;
+        text-align: center;
+        background-color: #0077c0;
+        transition: all 0.2s;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #005f8a;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Login</h1>
+    {% if error %}
+    <p>{{ error }}</p>
+    {% endif %}
+    <form method="post" action="{{ url_for('login') }}">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password">
+      <input type="submit" value="Login">
+    </form>
+  </body>
+</html>

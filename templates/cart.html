@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+
+  </head>
+  <body>
+    <header>
+      <h1>Shopping Cart</h1>
+      {% if username %}
+        <p>You are logged in as {{ username }} ({{ role }}).</p>
+      {% endif %}
+    </header>
+
+    <main>
+      <table class="cart-table">
+        <thead>
+          <tr>
+            <th>Product Name</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>Quantity</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for item in cart_items %}
+            <tr>
+              <td>{{ item[1] }}</td>
+              <td>{{ item[2] }}</td>
+              <td>{{ item[3] }}</td>
+              <td>{{ item[4] }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+
+      <div class="cart-buttons">
+        <a href="{{ url_for('index') }}" class="cart-button cart-button--secondary">Back to Main</a>
+        <a href="{{ url_for('logout') }}" class="cart-button cart-button--secondary">Logout</a>
+      </div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,84 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem;
+    background-color: #0077c0;
+    color: #fff;
+    text-align: center;
+  }
+  
+  p {
+    margin: 0;
+    padding: 1rem;
+    background-color: #f5f5f5;
+    color: #0077c0;
+    text-align: center;
+  }
+  
+  /* Table styles */
+  .cart-table {
+    width: 100%;
+    margin: 0;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  .cart-table th {
+    padding: 1rem;
+    text-align: left;
+    background-color: #0077c0;
+    color: #fff;
+  }
+  
+  .cart-table td {
+    padding: 1rem;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .cart-table tr:hover {
+    background-color: #f5f5f5;
+  }
+  
+  /* Button styles */
+  .cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+  }
+  
+  .cart-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 0.5rem;
+    color: #fff;
+    text-align: center;
+    background-color: #0077c0;
+    transition: all 0.2s;
+    cursor: pointer;
+  }
+  
+  .cart-button--secondary {
+    background-color: #a7a7a7;
+  }
+  
+  .cart-button:hover {
+    background-color: #005f8a;
+  }
+  

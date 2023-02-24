@@ -1,0 +1,22 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Add User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <h1>Add User</h1>
+    <form method="post" action="{{ url_for('add_user') }}">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password"><br>
+      <label for="role">Role:</label>
+      <select name="role" id="role">
+        <option value="user">user</option>
+        <option value="admin">admin</option>
+      </select><br>
+      <input type="submit" value="Add User">
+    </form>
+  </body>
+</html>

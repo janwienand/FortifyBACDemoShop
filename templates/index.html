@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Shopping Cart Example</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+  </head>
+  <body>
+    <header>
+      <h1>Welcome to the Shopping Cart Example</h1>
+      {% if username %}
+        <p>You are logged in as {{ username }} ({{ role }}).</p>
+      {% endif %}
+    </header>
+
+    <main class="index-main">
+      {% if username %}
+        <ul class="index-links">
+          <li>
+            <a href="{{ url_for('product_list') }}" class="index-link index-link--primary">View Products</a>
+          </li>
+          <li>
+            <a href="{{ url_for('shopping_cart') }}" class="index-link index-link--primary">View Your Shopping Cart</a>
+          </li>
+          <li>
+            <a href="{{ url_for('logout') }}" class="index-link index-link--secondary">Logout</a>
+          </li>
+        </ul>
+      {% else %}
+        <p class="index-login-prompt">Please <a href="{{ url_for('login') }}" class="index-link index-link--primary">login</a> to continue.</p>
+      {% endif %}
+    </main>
+  </body>
+</html>
