@@ -139,8 +139,11 @@ def get_user_role(username):
     conn = get_db()
     cursor = conn.cursor()
     cursor.execute("SELECT role FROM users WHERE username = ?", (username,))
-    role = cursor.fetchone()[0]
-    return role
+    row = cursor.fetchone()
+    if row is not None:
+        return row[0]
+    else:
+        return "unknown"
 
 if __name__ == "__main__":
     app.run(debug=True)
