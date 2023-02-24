@@ -18,8 +18,7 @@ To install and run the project, follow these steps:
 
 To exploit the CSRF vulnerability, follow these steps:
 
-    1. Have a look at the current users in the shopping.db database (using SELECT * FROM users 
-    or the show-all-users.sql) 
+    1. Have a look at the current users in the shopping.db database (using SELECT * FROM users or the show-all-users.sql) 
     2. Log in with username 'Alice' and password 'secret'
     3. Open the Malicious Website (CSRF-example.html) in another tab and click on the 'Submit' button.
     4. Have a look at the user database again and look for some new users
