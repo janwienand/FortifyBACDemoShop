@@ -24,3 +24,6 @@ To exploit the CSRF vulnerability, follow these steps:
     4. Have a look at the user database again and look for some new users
 
 ![](https://github.com/janwienand/FortifyBACDemoShop/blob/main/exploit-and-support-assets/Animation.gif)
+
+## Fortify
+After a scan with the latest Fortify Static Code Analyzer rulepacks, this vulnerability shows up in the Fortify Project Result (.fpr) file. A sample scan result is also included in the project. More information about Fortify can be found [here](https://www.microfocus.com/en-us/cyberres/application-security "here").
