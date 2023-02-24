@@ -23,4 +23,4 @@ To exploit the CSRF vulnerability, follow these steps:
     3. Open the Malicious Website (CSRF-example.html) in another tab and click on the 'Submit' button.
     4. Have a look at the user database again and look for some new users
 
-![](https://gifyu.com/image/S7Mmb)
+![](https://github.com/janwienand/FortifyBACDemoShop/blob/main/exploit-and-support-assets/Animation.gif)
